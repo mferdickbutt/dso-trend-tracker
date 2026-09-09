@@ -1,0 +1,141 @@
+{
+  "entity": "Apex Components (sample)",
+  "currency": "USD",
+  "revenueType": "credit_sales",
+  "dsoTargetDays": 45,
+  "notes": {
+    "revenue": "Monthly credit sales only — not cash sales and not total recognized revenue. Cash collections never sit in AR, so including them would understate DSO.",
+    "arEnding": "Gross trade receivables at month-end (ending AR balance).",
+    "formula": "dso = arEnding / (revenue / daysInPeriod)  (= arEnding * daysInPeriod / revenue)",
+    "daysInPeriod": "Calendar days in the month. daysInPeriod is stored on each row; js/dso.js can also derive it from the YYYY-MM key.",
+    "target": "Management DSO target in days. Under target is favorable (faster collections)."
+  },
+  "months": [
+    {
+      "month": "2025-03",
+      "label": "Mar 2025",
+      "arEnding": 3420000,
+      "revenue": 2180000,
+      "daysInPeriod": 31
+    },
+    {
+      "month": "2025-04",
+      "label": "Apr 2025",
+      "arEnding": 3510000,
+      "revenue": 2250000,
+      "daysInPeriod": 30
+    },
+    {
+      "month": "2025-05",
+      "label": "May 2025",
+      "arEnding": 3280000,
+      "revenue": 2310000,
+      "daysInPeriod": 31
+    },
+    {
+      "month": "2025-06",
+      "label": "Jun 2025",
+      "arEnding": 3650000,
+      "revenue": 2190000,
+      "daysInPeriod": 30
+    },
+    {
+      "month": "2025-07",
+      "label": "Jul 2025",
+      "arEnding": 3890000,
+      "revenue": 2050000,
+      "daysInPeriod": 31
+    },
+    {
+      "month": "2025-08",
+      "label": "Aug 2025",
+      "arEnding": 3720000,
+      "revenue": 2140000,
+      "daysInPeriod": 31
+    },
+    {
+      "month": "2025-09",
+      "label": "Sep 2025",
+      "arEnding": 3410000,
+      "revenue": 2280000,
+      "daysInPeriod": 30
+    },
+    {
+      "month": "2025-10",
+      "label": "Oct 2025",
+      "arEnding": 3150000,
+      "revenue": 2400000,
+      "daysInPeriod": 31
+    },
+    {
+      "month": "2025-11",
+      "label": "Nov 2025",
+      "arEnding": 3220000,
+      "revenue": 2350000,
+      "daysInPeriod": 30
+    },
+    {
+      "month": "2025-12",
+      "label": "Dec 2025",
+      "arEnding": 3580000,
+      "revenue": 2180000,
+      "daysInPeriod": 31
+    },
+    {
+      "month": "2026-01",
+      "label": "Jan 2026",
+      "arEnding": 3440000,
+      "revenue": 2090000,
+      "daysInPeriod": 31
+    },
+    {
+      "month": "2026-02",
+      "label": "Feb 2026",
+      "arEnding": 3190000,
+      "revenue": 2160000,
+      "daysInPeriod": 28
+    },
+    {
+      "month": "2026-03",
+      "label": "Mar 2026",
+      "arEnding": 3260000,
+      "revenue": 2270000,
+      "daysInPeriod": 31
+    },
+    {
+      "month": "2026-04",
+      "label": "Apr 2026",
+      "arEnding": 3180000,
+      "revenue": 2320000,
+      "daysInPeriod": 30
+    },
+    {
+      "month": "2026-05",
+      "label": "May 2026",
+      "arEnding": 3240000,
+      "revenue": 2380000,
+      "daysInPeriod": 31
+    },
+    {
+      "month": "2026-06",
+      "label": "Jun 2026",
+      "arEnding": 3310000,
+      "revenue": 2290000,
+      "daysInPeriod": 30
+    },
+    {
+      "month": "2026-07",
+      "label": "Jul 2026",
+      "arEnding": 3450000,
+      "revenue": 2210000,
+      "daysInPeriod": 31
+    },
+    {
+      "month": "2026-08",
+      "label": "Aug 2026",
+      "arEnding": 3290000,
+      "revenue": 2340000,
+      "daysInPeriod": 31
+    }
+  ]
+}

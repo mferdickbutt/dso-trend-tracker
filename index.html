@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DSO trend — Apex Components (sample)</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- first-paint: static DSO table baked by scripts/render-static.js; table is in the markup -->
+  <div class="wrap">
+    <header>
+      <h1>Days Sales Outstanding</h1>
+      <p class="lede">Apex Components (sample) · USD · revenue is <strong>monthly credit sales</strong> · target 45 days</p>
+    </header>
+
+    <section class="cards" aria-label="DSO summary">
+      <div class="card">
+        <span class="k">Latest DSO</span>
+        <span class="v good">43.6</span>
+      </div>
+      <div class="card">
+        <span class="k">Target</span>
+        <span class="v">45</span>
+      </div>
+      <div class="card">
+        <span class="k">Gap</span>
+        <span class="v good">-1.4 vs target</span>
+      </div>
+      <div class="card">
+        <span class="k">Best (lowest)</span>
+        <span class="v good">Oct 2025 · 40.7</span>
+      </div>
+      <div class="card">
+        <span class="k">Worst (highest)</span>
+        <span class="v bad">Jul 2025 · 58.8</span>
+      </div>
+    </section>
+
+    <div class="filters" id="filters" hidden>
+      <button type="button" data-filter="all" aria-pressed="true">All months</button>
+      <button type="button" data-filter="over">Over target</button>
+      <button type="button" data-filter="under">Under target</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Month</th>
+            <th scope="col">AR ending</th>
+            <th scope="col">Credit sales</th>
+            <th scope="col">Days</th>
+            <th scope="col">DSO</th>
+            <th scope="col">Target</th>
+            <th scope="col">vs target</th>
+            <th scope="col">MoM trend</th>
+          </tr>
+        </thead>
+        <tbody>
+<tr data-month="2025-03" data-vs="over"><td class="month">Mar 2025</td><td>$3,420,000</td><td>$2,180,000</td><td>31</td><td class="vs-over">48.6</td><td>45</td><td class="vs-over">over</td><td class="na">—</td></tr>
+<tr data-month="2025-04" data-vs="over"><td class="month">Apr 2025</td><td>$3,510,000</td><td>$2,250,000</td><td>30</td><td class="vs-over">46.8</td><td>45</td><td class="vs-over">over</td><td class="trend-down">-1.8 ↓</td></tr>
+<tr data-month="2025-05" data-vs="under"><td class="month">May 2025</td><td>$3,280,000</td><td>$2,310,000</td><td>31</td><td class="vs-under">44.0</td><td>45</td><td class="vs-under">under</td><td class="trend-down">-2.8 ↓</td></tr>
+<tr data-month="2025-06" data-vs="over"><td class="month">Jun 2025</td><td>$3,650,000</td><td>$2,190,000</td><td>30</td><td class="vs-over">50.0</td><td>45</td><td class="vs-over">over</td><td class="trend-up">+6.0 ↑</td></tr>
+<tr data-month="2025-07" data-vs="over"><td class="month">Jul 2025</td><td>$3,890,000</td><td>$2,050,000</td><td>31</td><td class="vs-over">58.8</td><td>45</td><td class="vs-over">over</td><td class="trend-up">+8.8 ↑</td></tr>
+<tr data-month="2025-08" data-vs="over"><td class="month">Aug 2025</td><td>$3,720,000</td><td>$2,140,000</td><td>31</td><td class="vs-over">53.9</td><td>45</td><td class="vs-over">over</td><td class="trend-down">-4.9 ↓</td></tr>
+<tr data-month="2025-09" data-vs="under"><td class="month">Sep 2025</td><td>$3,410,000</td><td>$2,280,000</td><td>30</td><td class="vs-under">44.9</td><td>45</td><td class="vs-under">under</td><td class="trend-down">-9.0 ↓</td></tr>
+<tr data-month="2025-10" data-vs="under"><td class="month">Oct 2025</td><td>$3,150,000</td><td>$2,400,000</td><td>31</td><td class="vs-under">40.7</td><td>45</td><td class="vs-under">under</td><td class="trend-down">-4.2 ↓</td></tr>
+<tr data-month="2025-11" data-vs="under"><td class="month">Nov 2025</td><td>$3,220,000</td><td>$2,350,000</td><td>30</td><td class="vs-under">41.1</td><td>45</td><td class="vs-under">under</td><td class="trend-up">+0.4 ↑</td></tr>
+<tr data-month="2025-12" data-vs="over"><td class="month">Dec 2025</td><td>$3,580,000</td><td>$2,180,000</td><td>31</td><td class="vs-over">50.9</td><td>45</td><td class="vs-over">over</td><td class="trend-up">+9.8 ↑</td></tr>
+<tr data-month="2026-01" data-vs="over"><td class="month">Jan 2026</td><td>$3,440,000</td><td>$2,090,000</td><td>31</td><td class="vs-over">51.0</td><td>45</td><td class="vs-over">over</td><td class="trend-up">+0.1 ↑</td></tr>
+<tr data-month="2026-02" data-vs="under"><td class="month">Feb 2026</td><td>$3,190,000</td><td>$2,160,000</td><td>28</td><td class="vs-under">41.4</td><td>45</td><td class="vs-under">under</td><td class="trend-down">-9.6 ↓</td></tr>
+<tr data-month="2026-03" data-vs="under"><td class="month">Mar 2026</td><td>$3,260,000</td><td>$2,270,000</td><td>31</td><td class="vs-under">44.5</td><td>45</td><td class="vs-under">under</td><td class="trend-up">+3.1 ↑</td></tr>
+<tr data-month="2026-04" data-vs="under"><td class="month">Apr 2026</td><td>$3,180,000</td><td>$2,320,000</td><td>30</td><td class="vs-under">41.1</td><td>45</td><td class="vs-under">under</td><td class="trend-down">-3.4 ↓</td></tr>
+<tr data-month="2026-05" data-vs="under"><td class="month">May 2026</td><td>$3,240,000</td><td>$2,380,000</td><td>31</td><td class="vs-under">42.2</td><td>45</td><td class="vs-under">under</td><td class="trend-up">+1.1 ↑</td></tr>
+<tr data-month="2026-06" data-vs="under"><td class="month">Jun 2026</td><td>$3,310,000</td><td>$2,290,000</td><td>30</td><td class="vs-under">43.4</td><td>45</td><td class="vs-under">under</td><td class="trend-up">+1.2 ↑</td></tr>
+<tr data-month="2026-07" data-vs="over"><td class="month">Jul 2026</td><td>$3,450,000</td><td>$2,210,000</td><td>31</td><td class="vs-over">48.4</td><td>45</td><td class="vs-over">over</td><td class="trend-up">+5.0 ↑</td></tr>
+<tr data-month="2026-08" data-vs="under"><td class="month">Aug 2026</td><td>$3,290,000</td><td>$2,340,000</td><td>31</td><td class="vs-under">43.6</td><td>45</td><td class="vs-under">under</td><td class="trend-down">-4.8 ↓</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="formula">Formula: DSO = AR ending / (credit sales / days in period). Under target is favorable. MoM trend is the change in DSO versus the prior month.</p>
+    <p class="foot">18 months · static first paint (no JavaScript required) · regenerate with <code>node scripts/render-static.js</code></p>
+  </div>
+  <script src="js/dso.js"></script>
+  <script>
+    (function () {
+      document.body.classList.add("js");
+      var bar = document.getElementById("filters");
+      if (!bar) return;
+      bar.hidden = false;
+      var buttons = bar.querySelectorAll("button[data-filter]");
+      var rows = document.querySelectorAll("tbody tr");
+      bar.addEventListener("click", function (e) {
+        var btn = e.target.closest("button[data-filter]");
+        if (!btn) return;
+        var f = btn.getAttribute("data-filter");
+        buttons.forEach(function (b) {
+          b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+        });
+        rows.forEach(function (tr) {
+          var vs = tr.getAttribute("data-vs");
+          tr.classList.toggle("is-hidden", f !== "all" && vs !== f);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
